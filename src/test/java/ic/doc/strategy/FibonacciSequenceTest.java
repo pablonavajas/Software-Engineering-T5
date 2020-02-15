@@ -10,7 +10,8 @@ import org.junit.Test;
 
 public class FibonacciSequenceTest {
 
-  final FibonacciSequence sequence = new FibonacciSequence();
+  final FibonacciSequence fibonacci = new FibonacciSequence();
+  final NumberSequence sequence = new NumberSequence(fibonacci);
 
   @Test
   public void definesFirstTwoTermsToBeOne() {
@@ -40,6 +41,7 @@ public class FibonacciSequenceTest {
 
   @Test
   public void canBeIteratedThrough() {
+
     assertThat(sequence, beginsWith(1, 1, 2, 3, 5));
   }
 

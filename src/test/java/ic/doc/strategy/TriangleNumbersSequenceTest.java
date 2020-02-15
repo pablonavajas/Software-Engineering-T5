@@ -10,7 +10,8 @@ import static org.junit.Assert.fail;
 
 public class TriangleNumbersSequenceTest {
 
-  final TriangleNumbersSequence sequence = new TriangleNumbersSequence();
+  final TriangleNumbersSequence triangleNumbers = new TriangleNumbersSequence();
+  final NumberSequence sequence = new NumberSequence(triangleNumbers);
 
   @Test
   public void definesFirstTermToBeOne() {
@@ -40,6 +41,7 @@ public class TriangleNumbersSequenceTest {
 
   @Test
   public void canBeIteratedThrough() {
+
     assertThat(sequence, beginsWith(1, 3, 6, 10, 15));
   }
 
