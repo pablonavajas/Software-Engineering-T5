@@ -1,12 +1,12 @@
 package ic.doc.strategy;
 
-import org.junit.Test;
-
-import static ic.doc.matchers.IterableBeginsWith.beginsWith;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.fail;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.CoreMatchers.containsString;
+import static ic.doc.matchers.IterableBeginsWith.beginsWith;
+import static org.hamcrest.core.Is.is;
+
+import org.junit.Test;
 
 public class TriangleNumbersSequenceTest {
 
