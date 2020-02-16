@@ -9,11 +9,11 @@ import static org.junit.Assert.fail;
 public abstract class NumberSequenceTest {
 
   private NumberSequence sequence;
-  private int[] Model;
+  private int[] model;
 
   public NumberSequenceTest(NumberSequence sequence, int[] Model) {
     this.sequence = sequence;
-    this.Model = Model;
+    this.model = Model;
   }
 
   public void isUndefinedForNegativeIndices() {
@@ -41,6 +41,6 @@ public abstract class NumberSequenceTest {
 
   public void canBeIteratedThrough() {
 
-    assertThat(sequence, beginsWith(Model[0], Model[1], Model[2], Model[3], Model[4]));
+    assertThat(sequence, beginsWith(model[0], model[1], model[2], model[3], model[4]));
   }
 }

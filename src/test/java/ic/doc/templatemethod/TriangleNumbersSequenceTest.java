@@ -7,20 +7,20 @@ import org.junit.Test;
 
 public class TriangleNumbersSequenceTest extends NumberSequenceTest {
 
-  final static TriangleNumbersSequence sequence = new TriangleNumbersSequence();;
+  final static TriangleNumbersSequence sequence = new TriangleNumbersSequence();
 
   public TriangleNumbersSequenceTest() {
     super(sequence, new int[]{1, 3, 6, 10, 15});
   }
 
   @Test
-  public void TriangleNumbersIsUndefinedForNegativeIndices() {
+  public void triangleNumbersIsUndefinedForNegativeIndices() {
 
     isUndefinedForNegativeIndices();
   }
 
   @Test
-  public void TriangleNumbersDefinesFirstTermToBeOne() {
+  public void triangleNumbersDefinesFirstTermToBeOne() {
 
     definesFirstTermToBeOne();
   }
