@@ -1,6 +1,6 @@
 package ic.doc.strategy;
 
-public class FibonacciSequence implements SequenceFormatter{
+public class FibonacciSequence implements SequenceFormatter {
 
   public int term(int i) {
     if (i < 0) {
