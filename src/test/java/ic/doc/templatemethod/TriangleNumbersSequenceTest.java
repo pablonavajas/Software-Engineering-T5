@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class TriangleNumbersSequenceTest extends NumberSequenceTest {
 
-  final static TriangleNumbersSequence sequence = new TriangleNumbersSequence();
+  private static final TriangleNumbersSequence sequence = new TriangleNumbersSequence();
 
   public TriangleNumbersSequenceTest() {
     super(sequence, new int[]{1, 3, 6, 10, 15});

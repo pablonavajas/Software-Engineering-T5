@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class FibonacciSequenceTest extends NumberSequenceTest {
 
-  final static FibonacciSequence sequence = new FibonacciSequence();
+  private static final FibonacciSequence sequence = new FibonacciSequence();
 
   public FibonacciSequenceTest() {
     super(sequence, new int[]{1, 1, 2, 3, 5});
