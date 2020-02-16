@@ -11,9 +11,9 @@ public abstract class NumberSequenceTest {
   private NumberSequence sequence;
   private int[] model;
 
-  public NumberSequenceTest(NumberSequence sequence, int[] Model) {
+  public NumberSequenceTest(NumberSequence sequence, int[] model) {
     this.sequence = sequence;
-    this.model = Model;
+    this.model = model;
   }
 
   public void isUndefinedForNegativeIndices() {
