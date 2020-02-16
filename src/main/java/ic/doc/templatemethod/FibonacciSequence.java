@@ -3,7 +3,7 @@ package ic.doc.templatemethod;
 public class FibonacciSequence extends NumberSequence {
 
   @Override
-  public int SequenceProcedure(int i) {
+  public int sequenceProcedure(int i) {
     if (i < 2) {
       return 1;
     }
