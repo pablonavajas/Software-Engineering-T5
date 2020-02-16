@@ -5,12 +5,7 @@ import java.util.Iterator;
 public abstract class NumberSequence implements Iterable<Integer> {
 
   public int term(int i) {
-    if (i < 0) {
-      throw new IllegalArgumentException("Not defined for indices < 0");
-    }
-    if (i < 1) {
-      return 1;
-    }
+
     return sequenceProcedure(i);
   }
 

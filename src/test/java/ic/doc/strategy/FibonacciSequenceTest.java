@@ -13,10 +13,15 @@ public class FibonacciSequenceTest {
   final FibonacciSequence fibonacci = new FibonacciSequence();
   final NumberSequence sequence = new NumberSequence(fibonacci);
 
+  public void definesFirstTermToBeOne() {
+
+    assertThat(sequence.term(0), is(1));
+  }
+
   @Test
   public void definesFirstTwoTermsToBeOne() {
 
-    assertThat(sequence.term(0), is(1));
+    definesFirstTermToBeOne();
     assertThat(sequence.term(1), is(1));
   }
 

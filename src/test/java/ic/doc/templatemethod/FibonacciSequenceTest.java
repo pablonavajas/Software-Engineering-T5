@@ -1,25 +1,30 @@
 package ic.doc.templatemethod;
 
-import static ic.doc.matchers.IterableBeginsWith.beginsWith;
-import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
-public class FibonacciSequenceTest {
+public class FibonacciSequenceTest extends NumberSequenceTest {
 
-  final FibonacciSequence sequence = new FibonacciSequence();
+  final static FibonacciSequence sequence = new FibonacciSequence();
 
-  @Test
-  public void definesFirstTwoTermsToBeOne() {
-
-    assertThat(sequence.term(0), is(1));
-    assertThat(sequence.term(1), is(1));
+  public FibonacciSequenceTest() {
+    super(sequence, new int[]{1, 1, 2, 3, 5});
   }
 
   @Test
+  public void fibonacciIsUndefinedForNegativeIndices() {
+
+    isUndefinedForNegativeIndices();
+  }
+
+  @Test
+  public void fibonacciDefinesFirstTwoTermsToBeOne() {
+
+    definesFirstTwoTermsToBeOne();
+  }
+
   public void definesSubsequentTermsToBeTheSumOfThePreviousTwo() {
 
     assertThat(sequence.term(2), is(2));
@@ -28,19 +33,13 @@ public class FibonacciSequenceTest {
   }
 
   @Test
-  public void isUndefinedForNegativeIndices() {
-
-    try {
-      sequence.term(-1);
-      fail("should have thrown exception");
-    } catch (IllegalArgumentException e) {
-      assertThat(e.getMessage(), containsString("Not defined for indices < 0"));
-    }
+  @Override
+  public void subsequentTermsRule() {
+    definesSubsequentTermsToBeTheSumOfThePreviousTwo();
   }
 
   @Test
-  public void canBeIteratedThrough() {
-    assertThat(sequence, beginsWith(1, 1, 2, 3, 5));
+  public void fibonacciCanBeIteratedThrough() {
+    canBeIteratedThrough();
   }
-
 }

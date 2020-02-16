@@ -20,7 +20,7 @@ public class TriangleNumbersSequenceTest {
   }
 
   @Test
-  public void definesSubsequentTermsToBeTheProductOfTheNextTwo() {
+  public void definesSubsequentTermsToBeHalfTheProductOfTheNextTwo() {
 
     assertThat(sequence.term(1), is(3));
     assertThat(sequence.term(2), is(6));
